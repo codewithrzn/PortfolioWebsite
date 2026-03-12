@@ -1,0 +1,343 @@
+/* =========================
+   Google Fonts Import
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+
+/* =========================
+   Global Reset & Base Styles
+========================= */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    /* Default font */
+}
+
+body {
+    background-color: black;
+    /* Main background */
+}
+
+
+/* =========================
+   Hero Section Background
+========================= */
+.main {
+    background-image: url("images/bg.jpg");
+    /* Hero background image */
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    height: 644px;
+    position: relative;
+    /* Needed for overlay positioning */
+}
+
+
+/* Dark Overlay Layer */
+.main .box {
+    height: 644px;
+    width: 100%;
+    opacity: 0.69;
+    /* Background dark effect */
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+
+/* =========================
+   Navigation Bar
+========================= */
+nav {
+    max-width: 60vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+/* Netflix Logo */
+nav img {
+    width: 130px;
+    position: relative;
+    z-index: 10;
+    /* Keeps logo above overlay */
+}
+
+/* Nav Buttons */
+nav button {
+    position: relative;
+    z-index: 10;
+    /* Above overlay */
+}
+
+
+/* =========================
+   Hero Content
+========================= */
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    /* Different font for hero */
+    height: calc(100% - 100px);
+    /* Full height minus navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding: 0 30px;
+}
+
+/* Hero Main Heading */
+.hero> :nth-child(1) {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+
+/* Hero Subheading */
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Hero Small Text */
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* =========================
+   Section Divider
+========================= */
+.separation {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 20;
+}
+
+
+/* =========================
+   Buttons Styling
+========================= */
+.btn {
+    padding: 3px 8px;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.021);
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+/* Primary Red Button */
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+/* Small Red Button Variant */
+.btn-red-sm {
+    background-color: red;
+    color: white;
+}
+
+
+/* Hero Input + Button Container */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Email Input Field */
+.main input {
+    padding: 7px 101px 8px 14px;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+}
+
+
+/* =========================
+   First Content Section
+========================= */
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+}
+
+
+/* Image + Video Container */
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+    /* Image above video */
+}
+
+.secImg video {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    width: 555px;
+}
+
+
+/* Text Content Inside Section */
+section.first>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+
+section.first>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+section.first>div :nth-child(2) {
+    font-size: 24px;
+}
+
+
+/* =========================
+   FAQ Section
+========================= */
+.faq {
+    background: black;
+    color: white;
+    padding: 34px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+}
+
+/* FAQ Box */
+.faqbox {
+    transition: all 1s ease-out;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d2d2d;
+    padding: 24px;
+    max-width: 60vw;
+    margin: 34px auto;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.faqbox:hover {
+    background-color: #414141;
+}
+
+.faqbox svg {
+    filter: invert(1);
+}
+
+
+/* =========================
+   Footer Section
+========================= */
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 60px;
+}
+
+footer .questions {
+    padding: 34px 0;
+}
+
+/* Footer Grid Layout */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+/* Footer Column */
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+@media screen and (max-width: 1300px) {
+
+    nav {
+        max-width: 90vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .secImg img,
+    .secImg video {
+        width: 305px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2),
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .faq h2 {
+        font-size: 32px;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 75px 0;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
